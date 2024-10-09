@@ -20,14 +20,14 @@ const RestaurantCard = (props) => {
         className="m-4 mt-0 p-4 w-[250px] h-[350px]  bg- rounded-t-md border-b-2"
       >
         <img
-          className="rounded-lg w-[220px] h-[138.5px]"
+          className="rounded-lg w-[273px] h-[182px]"
           alt="res-logo"
           src={`${CDN_URL}${cloudinaryImageId}`}
         />
-        <h3 className="font-bold py-4 text-lg">{name}</h3>
+        <h3 className="font-bold py-1 text-lg">{name}</h3>
         <h4 className="text-sm text-gray-600">{cuisines.join(", ")}</h4>
         <h4 className="text-sm text-gray-600">{avgRating} ⭐</h4>
-        <h4 className="text-sm text-gray-600">{deliveryTime} mins</h4>
+        {/* <h4 className="text-sm text-gray-600">{deliveryTime} mins</h4> */}
       </div>
     </motion.div>
   );
