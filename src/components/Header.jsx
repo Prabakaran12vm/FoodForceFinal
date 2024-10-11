@@ -28,25 +28,26 @@ const Header = () => {
           placeholder="Search"
           className="input input-bordered w-24 md:w-auto font-black"
         /> */}
-          
-
       </div>
       <div className="flex-none pr-[30px]">
         {/* link1 */}
         <ul className="menu menu-horizontal px-2">
-          
-
-          <li >
-            <Link to="/" className="btn btn-ghost hover:bg-[#ff5200] hover:text-gray-200">
-               Home
-                            
+          <li>
+            <Link
+              to="/"
+              className="btn btn-ghost hover:bg-[#ff5200] hover:text-gray-200"
+            >
+              Home
             </Link>
           </li>
         </ul>
         {/* link 2 */}
         <ul className="menu menu-horizontal px-2">
           <li>
-            <Link to="/about" className="btn btn-ghost hover:bg-[#ff5200] hover:text-gray-200">
+            <Link
+              to="/about"
+              className="btn btn-ghost hover:bg-[#ff5200] hover:text-gray-200"
+            >
               About
             </Link>
           </li>
@@ -54,8 +55,12 @@ const Header = () => {
 
         {/* cart */}
         <div className="dropdown dropdown-end px-2">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <Link to="/cart">
+          <Link to="/cart">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle"
+            >
               <div className="indicator">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,8 +80,8 @@ const Header = () => {
                   {cartItems.length}
                 </span>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
           {/* <div
             tabIndex={0}
             className='card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow'
