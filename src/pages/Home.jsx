@@ -100,14 +100,14 @@ const Home = () => {
             Search
           </button>
         </div>
-        <div className="form-control  pl-[120px] mr-0 ">
-          <button className="bg-[#ff5200] rounded-xl pl-1 ">
+        <div className="form-control  pl-[60px] mr-0 ">
+          <button className=" rounded-xl pl-1 ">
           <label className="label cursor-pointer">
-            <span className="label-text text-white">Top Rated</span>
+            <span className="label-text text-gray-800">Top Rated</span>
             <input
               type="checkbox"
               // bg-[#ff5200] hover:bg-[#ff5200]
-              className="toggle ml-1 bg-gray-600 toggle-error   "
+              className="toggle ml-2 bg-gray-600  toggle-error   "
               onClick= {
                 filterBtnClick
                 
