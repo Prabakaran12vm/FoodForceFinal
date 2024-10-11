@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
 import { CDN_URL } from "../utils/constants";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 
 const ItemList = ({ itemCards }) => {
@@ -25,12 +23,12 @@ const ItemList = ({ itemCards }) => {
   };
 
   return (
-    <div>
+    <div className="">
       {itemCards.map((itemCard) => (
         <div
           data-testid="foodItems"
           key={itemCard.card.info.id}
-          className="p-2 m-2 border-b-2  min-h-[200px] border-gray-400 text-left flex justify-between"
+          className="p-2 m-2 border-b-2  min-h-[200px]  border-gray-400 text-left flex justify-between"
         >
           <div className="w-9/12 pb-5 b-2 bg-">
             <div className="py-2">
@@ -54,7 +52,7 @@ const ItemList = ({ itemCards }) => {
               {itemCard?.card?.info?.description}
             </span>
           </div>
-          <div className="w-4/12 p-2 bg-">
+          <div className="w-4/12 p-2 ">
             {/* <div className="absolute  ">
               {/* {pathname === "/cart" ? (
                 <></>
@@ -71,12 +69,12 @@ const ItemList = ({ itemCards }) => {
               {pathname === "/cart" ? (
                 <></>
               ) :
-              <button className="font-bold mt-[120px] hover:bg-gray-100 absolute   p-2 w-28 ml-[40px] text-green-600 bg-white rounded-lg shadow-lg "
+              <button className="font-bold  mt-[120px] hover:bg-gray-100 absolute   p-2 w-28 ml-[40px] text-green-600 bg-white rounded-lg shadow-lg "
               onClick={() => handleAddItem(itemCard)}>
                 ADD
               </button>}
               <img
-                className="ml-5  rounded-2xl min-h-[130px] min-w-[130px] max-h-[144px] max-w-[156px]"
+                className="ml-5  rounded-2xl min-h-[130px] min-w-[140px] max-h-[144px] max-w-[156px]"
                 src={`${CDN_URL}${itemCard.card.info.imageId}`}
               />
             </div>
