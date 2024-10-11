@@ -16,17 +16,18 @@ const ResMenuShimmer = () => {
         <div className=" w-11/12 mx-auto my-4 p-4 mt-6 pl-[50px] h-[500px] ">
           <div className=" h-[200px] ">
             <div className="h-[200px] w-[20px] ">
-              {/* <button className="font-bold mt-[120px] absolute p-2 w-28 ml-[40px]  "></button> */}
-
               <h2 className="h-[20px] skeleton w-[350px] ml-[20px] mt-[30px]  absolute "></h2>
               <h2 className="h-[80px] skeleton w-[350px] ml-[20px] mt-[60px]  absolute "></h2>
               <div className="ml-[400px]  flex mt-[20px] skeleton h-[144px] w-[156px]"></div>
             </div>
-            <span className="bg-"></span>
-            {/* <h1 className="skeleton mx-4 bg-black h-4 w-[350px]"></h1> */}
           </div>
-
-          {/* </div> */}
+          <div className=" h-[200px] ">
+            <div className="h-[200px] w-[20px] ">
+              <h2 className="h-[20px] skeleton w-[350px] ml-[20px] mt-[30px]  absolute "></h2>
+              <h2 className="h-[80px] skeleton w-[350px] ml-[20px] mt-[60px]  absolute "></h2>
+              <div className="ml-[400px]  flex mt-[20px] skeleton h-[144px] w-[156px]"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
