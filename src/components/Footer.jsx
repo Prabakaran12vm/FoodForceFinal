@@ -21,7 +21,7 @@ const Footer = () => {
     <>
     <div className='h-3'>
       <hr />
-        <footer className='footer bg-[#ff5200] text-neutral-content p-[15px] flex justify-between items-center'>
+        <footer className='footer bg-[#ff5200] text-neutral-content p-[15px]  flex justify-between items-center'>
           <aside className='ml-[45px]'>
             <svg
               width='50'
@@ -41,7 +41,7 @@ const Footer = () => {
             </p>
           </aside>
           <nav className='mr-[60px]'>
-            <h6 className='footer-title '>Social</h6>
+            <h6 className='footer-title  '>Social</h6>
             <div className='grid grid-flow-col gap-4'>
               {socials.map((social, index) => (
                 <Link
