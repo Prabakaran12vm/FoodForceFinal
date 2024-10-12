@@ -4,7 +4,6 @@ import { clearCart } from "../redux/slices/cartSlice";
 
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { BsCartXFill } from "react-icons/bs";
-import CartShimmer from '../components/skeleton/CartShimmer'
 
 
 const Cart = () => {
@@ -15,7 +14,6 @@ const Cart = () => {
     // dispath an action
     dispatch(clearCart());
   };
-if (!cartItems) return <CartShimmer/>
 
 
   return (
