@@ -7,7 +7,7 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="navbar max-h-[30px] shadow-xl bg-[#ff5200] text-white font-swig pr-[40px]">
-      <div className="flex-1">
+      <div className="flex-1  ">
         <motion.div
           whileHover={{
             scale: 1.15,
@@ -16,7 +16,7 @@ const Header = () => {
           whileTap={{ scale: 1 }}
         >
           <Link to="/">
-            <a className="btn btn-ghost text-xl">Logo</a>
+            <a className="btn  btn-ghost text-xl">Logo</a>
           </Link>
         </motion.div>
       </div>
@@ -54,12 +54,12 @@ const Header = () => {
         </ul>
 
         {/* cart */}
-        <div className="dropdown dropdown-end px-2">
+        <div className="dropdown dropdown-end px-2 ">
           <Link to="/cart">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle"
+              className="btn btn-ghost btn-circle "
             >
               <div className="indicator">
                 <svg
