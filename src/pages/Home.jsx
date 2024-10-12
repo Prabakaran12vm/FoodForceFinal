@@ -14,7 +14,6 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
   const [showTopRated, setShowTopRated] = useState(false);
 
-  
   // import setUserName and required details from the context
   // const { loggedInuser, setUserName } = useContext(UserContext);
 
@@ -51,26 +50,25 @@ const Home = () => {
       throw err;
     }
   };
-  
-//  top rated filter
- const filterBtnClick = ()=>{
-  console.log("dummy")
-  const filteredList = restaurantList.filter((res) => res.info.avgRating > 4)
-  if (showTopRated == false){
-    setFilteredRestaurant(filteredList)
-    setShowTopRated(true)
-  }
-  else {
-    setFilteredRestaurant(restaurantList)
-    setShowTopRated(false)
-  }
- }
+
+  //  top rated filter
+  const filterBtnClick = () => {
+    console.log("dummy");
+    const filteredList = restaurantList.filter((res) => res.info.avgRating > 4);
+    if (showTopRated == false) {
+      setFilteredRestaurant(filteredList);
+      setShowTopRated(true);
+    } else {
+      setFilteredRestaurant(restaurantList);
+      setShowTopRated(false);
+    }
+  };
   // conditional rendering
   // if (restaurantList.length === 0)
   return !restaurantList?.length ? (
     <Shimmer />
   ) : (
-    <div className="body  bg-rgb(255, 255, 255)">
+    <div className="body   bg-rgb(255, 255, 255)">
       <div className="flex items-center  ml-[300px]">
         <div className="m-4 p-4 ">
           <input
@@ -84,7 +82,7 @@ const Home = () => {
             }}
           />
           <button
-            className=" p-4 py-2 m-4  bg-[#ff5200] text-white rounded-xl"
+            className=" p-4  m-4 btn bg-[#ff5200] text-white rounded-xl hover:bg-[#ff2200]"
             onClick={() => {
               // Filter the res and update the UI
               // search text
@@ -102,19 +100,14 @@ const Home = () => {
         </div>
         <div className="form-control  pl-[60px] mr-0 ">
           <button className=" rounded-xl pl-1 ">
-          <label className="label cursor-pointer">
-            <span className="label-text text-gray-800">Top Rated</span>
-            <input
-              type="checkbox"
-              // bg-[#ff5200] hover:bg-[#ff5200]
-              className="toggle ml-2 bg-gray-600  toggle-error   "
-              onClick= {
-                filterBtnClick
-                
-              }
-                
-            />
-          </label>
+            <label className="label cursor-pointer">
+              <span className="label-text text-gray-800">Top Rated</span>
+              <input
+                type="checkbox"
+                className="toggle ml-2 bg-gray-600  toggle-error   "
+                onClick={filterBtnClick}
+              />
+            </label>
           </button>
         </div>
         {/* <div className='m-4 p-4 flex items-center'>
@@ -142,11 +135,8 @@ const Home = () => {
             to={`restaurants/${restaurant.info.id}`}
           >
             {/* if a delivery time is less than 30mins add speedy label*/}
-           
 
-            
-              <RestaurantCard resData={restaurant} />
-            
+            <RestaurantCard resData={restaurant} />
 
             {/* {
             restaurant.info.sla.deliveryTime < 26 ? <RestaurantCardSpeedy resData={restaurant} /> : <RestaurantCard resData={restaurant} />
