@@ -21,7 +21,7 @@ const Footer = () => {
     <>
     <div className='h-3'>
       <hr />
-        <footer className='footer bg-[#ff5200] text-neutral-content p-[15px]  flex justify-between items-center'>
+        <footer className='footer bg-[#ff5200] text-white p-[15px]  flex justify-between items-center'>
           <aside className='ml-[45px]'>
             <svg
               width='50'
