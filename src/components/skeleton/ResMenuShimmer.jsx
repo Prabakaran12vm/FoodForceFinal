@@ -1,6 +1,6 @@
 const ResMenuShimmer = () => {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto min-h-screen">
       {/* res banner */}
       <div className="flex flex-col gap-4 w-[750px] h-auto mx-auto px-10 mt-0 pt-0">
         <div className="skeleton  mx-auto px-10 mt-0 pt-0  rounded-b-full items-center w-[650px] h-[150px] ">

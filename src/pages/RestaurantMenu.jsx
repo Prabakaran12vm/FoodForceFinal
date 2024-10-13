@@ -45,7 +45,7 @@ const RestaurantMenu = () => {
   // console.log("categories", categories);
 
   return (
-    <div className='text-center '>
+    <div className='text-center min-h-screen'>
       <div className='mx-auto px-10 mt-0 pt-0 bg-gray-800 rounded-b-full shadow-xl shadow-gray-300 text-white items-center w-[650px] h-[150px] '>
       <h1 className='font-bold pt-6 text-2xl'>{name}</h1>
       <p className='pt-3  font-light '>

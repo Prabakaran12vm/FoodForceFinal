@@ -17,8 +17,8 @@ const Cart = () => {
 
 
   return (
-    <div className=" text-center m-4 p-4">
-      <h1 className="text-2xl font-bold mt-[30px]"></h1>
+    <div className=" text-center m-4 p-4 min-h-screen">
+      <h1 className="text-2xl font-bold mt-[30px]">Cart</h1>
       <div>
         <div
           tabIndex={0}
@@ -29,7 +29,7 @@ const Cart = () => {
         <ItemList itemCards={cartItems} />
         {/* cartItems.length === 0 */}
         {!cartItems.length ? (
-          <div className="mt-[80px] h-[255px] items-center">
+          <div className="mt-[80px] h-[155px] items-center">
             {/* <h3>Cart is empty, Add items to the cart<h3/>  */}
             <span className="text-xl">Cart is empty, Add items to the cart</span>
             <div className=" "><span className=" flex ml-[270px] my-3  ">

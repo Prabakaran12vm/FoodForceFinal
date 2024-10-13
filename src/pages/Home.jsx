@@ -4,7 +4,6 @@ import RestaurantCard from "../components/RestaurantCard";
 // import resList from "../utils/mockData";
 // import Shimmer from "./Shimmer";
 import Shimmer from "../components/skeleton/Shimmer";
-import { combineSlices } from "@reduxjs/toolkit";
 // import UserContext from '../utils/UserContext';
 
 const Home = () => {
@@ -68,7 +67,7 @@ const Home = () => {
   return !restaurantList?.length ? (
     <Shimmer />
   ) : (
-    <div className="body   bg-rgb(255, 255, 255)">
+    <div className="body   bg-rgb(255, 255, 255) min-h-screen">
       <div className="flex items-center  ml-[300px]">
         <div className="m-4 p-4 ">
           <input
