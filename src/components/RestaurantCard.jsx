@@ -1,5 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa6";
+import { MdDeliveryDining } from "react-icons/md";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
@@ -25,9 +27,21 @@ const RestaurantCard = (props) => {
           src={`${CDN_URL}${cloudinaryImageId}`}
         />
         <h3 className="font-bold py-1 text-lg">{name}</h3>
-        <h4 className="text-sm text-gray-600">{cuisines.join(", ")}</h4>
-        <h4 className="text-sm text-gray-600">{avgRating} ⭐</h4>
-        {/* <h4 className="text-sm text-gray-600">{deliveryTime} mins</h4> */}
+        <h4 className="text-sm text-gray-600">
+          {cuisines.join(", ").slice(0, 60)}...
+        </h4>
+        <span className="absolute mt-[5px]">
+          {" "}
+          <FaStar  size={15} color="green"/>
+        </span>
+        <h4 className="text-sm ml-5  text-gray-600 py-1">{avgRating} </h4>
+
+        <div className="absolute">
+          <MdDeliveryDining size={18} color="ff5200" />
+        </div>
+        <h4 className="text-sm text-gray-600 ml-[20px] ">
+          {deliveryTime} mins
+        </h4>
       </div>
     </motion.div>
   );
