@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import logo from '../images/logo.png'
+
 
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -16,7 +18,8 @@ const Header = () => {
           whileTap={{ scale: 1 }}
         >
           <Link to="/">
-            <a className="btn  btn-ghost text-xl">Logo</a>
+            {/* <a className="pl-4 font-semibold "></a> */}
+            <img src={logo} className="h-[90px] pl-0" alt="logo" />
           </Link>
         </motion.div>
       </div>
