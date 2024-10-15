@@ -28,7 +28,7 @@ const RestaurantCard = (props) => {
         />
         <h3 className="font-bold py-1 text-lg">{name}</h3>
         <h4 className="text-sm text-gray-600">
-          {cuisines.join(", ").slice(0, 60)}...
+          {cuisines.join(", ").slice(0, 50)}...
         </h4>
         <span className="absolute mt-[5px]">
           {" "}
