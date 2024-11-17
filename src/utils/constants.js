@@ -5,3 +5,5 @@ export const LOGO_URL =
 
 export const MENU_API ='https://food-api-o33x.onrender.com/api/restaurants'
   // 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.89960&lng=80.22090&restaurantId=';
+export const DEFAULT_LATITUDE=12.89960
+export const DEFAULT_LONGITUDE=80.22090

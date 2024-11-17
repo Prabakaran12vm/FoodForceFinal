@@ -5,6 +5,9 @@ import RestaurantCard from "../components/RestaurantCard";
 // import Shimmer from "./Shimmer";
 import Shimmer from "../components/skeleton/Shimmer";
 // import UserContext from '../utils/UserContext';
+import { DEFAULT_LATITUDE, DEFAULT_LONGITUDE } from '../utils/constants';
+import useGeoLocation from '../hooks/useGeoLocation';
+
 
 const Home = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -12,6 +15,10 @@ const Home = () => {
 
   const [searchText, setSearchText] = useState("");
   const [showTopRated, setShowTopRated] = useState(false);
+  const {latitude, longitude} = useGeoLocation();
+
+  const lat = latitude || DEFAULT_LATITUDE;
+  const lng = longitude || DEFAULT_LONGITUDE;
 
   // import setUserName and required details from the context
   // const { loggedInuser, setUserName } = useContext(UserContext);
@@ -24,12 +31,12 @@ const Home = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [lat, lng]);
 
   const fetchData = async () => {
     // const url2 = 'http://localhost:5000/api/restaurants'
-    const url =
-      "https://food-api-o33x.onrender.com/api/restaurants";
+    // const url ="https://food-api-o33x.onrender.com/api/restaurants";
+    const url = `https://food-api-o33x.onrender.com/api/restaurants?lat=${lat}&lng=${lng}`;
     try {
       const data = await fetch(url);
       const json = await data.json();
