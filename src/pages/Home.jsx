@@ -134,7 +134,7 @@ const Home = () => {
           /> */}
         </div>
       </div>
-      <div className="p-[40px]  grid grid-cols-4  gap-[10px] pt-[10px] ">
+      <div className="p-[40px] md:grid-cols-1  grid grid-cols-4  gap-[10px] pt-[10px] ">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
