@@ -37,7 +37,7 @@ const Home = () => {
     // const url2 = 'http://localhost:5000/api/restaurants'
     // http://foodapi.vercel.app/restaurants
     // const url ="https://food-api-o33x.onrender.com/api/restaurants";
-    const url = `http://foodapi.vercel.app/restaurants?lat=${lat}&lng=${lng}`;
+    const url = `https://foodapi.vercel.app/restaurants?lat=${lat}&lng=${lng}`;
     try {
       const data = await fetch(url);
       const json = await data.json();
